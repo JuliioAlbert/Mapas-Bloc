@@ -15,7 +15,9 @@ void main() async {
           create: (context) =>
               MapBloc(locationBloc: context.read<LocationBloc>())),
       BlocProvider<SearchBloc>(
-          create: (context) => SearchBloc(trafficService: TrafficService()))
+          create: (context) => SearchBloc(
+                trafficService: TrafficService(),
+              ))
     ],
     child: const MyApp(),
   ));
